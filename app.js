@@ -37,8 +37,13 @@ const promedioNotas = () => {
     return prom
 }
 const mayorNotaInt=(notas)=>{
-    let notamax=notas[0];
-    while
+    let notaMax=notas[0];
+    for(let i=0;i<notas.lenght;i++){
+        if(notaMax>notas[i]){
+            notaMax=notas[i];
+        }
+    }
+    return notaMax;
 }
 
 promBtn.addEventListener('click',()=>{
