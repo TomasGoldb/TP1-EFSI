@@ -62,7 +62,12 @@ body{
     border-radius: 10px;
     font-size: 1lh;
     color: white;
-    border: 1px solid white
+    border: 1px solid white;
+    transition: background-color 0.15s ease-in;
+}
+.input-section .div-input .botones button:hover{
+    background-color: rgb(231, 178, 64);
+    cursor: pointer;
 }
 .visor{
     display: flex;
