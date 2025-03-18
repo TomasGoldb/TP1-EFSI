@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid black;
+    font-family: "Mulish", sans-serif;
+}
+
+body{
+    height: 99vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #5b5b5b;
+    background-image: url("data:image/svg+xml,%3Csvg width='76' height='18' viewBox='0 0 76 18' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M32 18c-2.43-1.824-4-4.73-4-8 0-4.418-3.582-8-8-8H0V0h20c5.523 0 10 4.477 10 10 0 4.418 3.582 8 8 8h20c4.418 0 8-3.582 8-8 0-5.523 4.477-10 10-10v2c-4.418 0-8 3.582-8 8 0 3.27-1.57 6.176-4 8H32zM64 0c-1.67 1.256-3.748 2-6 2H38c-2.252 0-4.33-.744-6-2h32z' fill='%23d3d2d3' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");    
+}
+.input-section{
+    width: 60%;
+    height: 70%;
+    border: 15px solid rgb(216, 154, 20);
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-section .div-input{
+    width: 80%;
+}
+.input-section .div-input h1{
+    width: 100%;
+    text-align: center;
+    font-size: 2lh;
+    margin-bottom: 4%;
+}
+.input-section .div-input div p{
+    font-size: 1.4lh;
+    margin-bottom: 1%;
+}
+.input-section .div-input div{
+    margin-bottom: 2%;
+}
+.input-section .div-input div input{
+    font-size: 1lh;
+    border-radius: 10px;
+    outline: none;
+    width: 98%;
+    padding: 1%;
+}
+.input-section .div-input .botones{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+.input-section .div-input .botones button{
+    padding: 1%;
+    background-color: rgb(216, 154, 20);
+    border-radius: 10px;
+    font-size: 1lh;
+    color: white;
+    border: 1px solid white
+}
