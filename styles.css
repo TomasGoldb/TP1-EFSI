@@ -5,7 +5,6 @@
 *{
     margin: 0px;
     padding: 0px;
-    border: 1px solid black;
     font-family: "Mulish", sans-serif;
 }
 
@@ -64,4 +63,12 @@ body{
     font-size: 1lh;
     color: white;
     border: 1px solid white
+}
+.visor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.giff{
+    width: 20%;
 }

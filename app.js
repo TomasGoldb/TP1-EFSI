@@ -5,6 +5,13 @@ let efsi=document.getElementById('efsi');
 let promBtn=document.getElementById('prom');
 let mayorNota=document.getElementById('mayorNota');
 let pVisor=document.getElementById('pVisor');
+let gif= document.getElementById("gif");
+const gifs=[
+    "/gifs/1.gif",
+    "/gifs/2.gif",
+    "/gifs/3.gif",
+    "/gifs/4.gif"
+];
 
 const validarNota=(input)=>{
     if(input.value>=notaMin&&input.value<=notaMax){
@@ -38,18 +45,49 @@ const promedioNotas = () => {
 }
 const mayorNotaInt=(notas)=>{
     let notaMax=notas[0];
-    for(let i=0;i<notas.lenght;i++){
-        if(notaMax>notas[i]){
+    let materiasMaxNota=[];
+    let materias=["matemática", "lengua", "efsi"]
+    for(let i=0;i<notas.length;i++){
+        if(notaMax<notas[i]){
             notaMax=notas[i];
         }
     }
-    return notaMax;
+    for(let i=0;i<notas.length;i++){
+        if(notas[i]==notaMax){
+            materiasMaxNota.push(materias[i]);
+        }
+    }
+
+    return materiasMaxNota;
+}
+const mostrarGif = (nota) =>{
+    if(nota<=3){
+        gif.src=gifs[0];
+    } else if(nota>3&&nota<6){
+        gif.src=gifs[1];
+    } else if(nota>=6&&nota<8){
+        gif.src=gifs[2];
+    } else{
+        gif.src=gifs[3];
+    }
 }
 
 promBtn.addEventListener('click',()=>{
     if(datosValidos()){
+        if(promedioNotas()>=6){
+            pVisor.style.color="green";
+        } else{
+            pVisor.style.color="red";
+        }
         pVisor.innerText=promedioNotas();
+        mostrarGif(promedioNotas());
     } else{
         alert("Los datos no son válidos o no has ingresado todas las notas!");
     }
+});
+mayorNota.addEventListener('click',()=>{
+    let materiasMaxNota=mayorNotaInt([parseInt(mate.value),parseInt(lengua.value),parseInt(efsi.value)]);
+    console.log(materiasMaxNota);
+    pVisor.style.color="blue"
+    pVisor.innerText="La/s materia/s con mayor nota es/son: "+materiasMaxNota.join(", ");
 });
