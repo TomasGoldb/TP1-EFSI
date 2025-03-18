@@ -7,10 +7,10 @@ let mayorNota=document.getElementById('mayorNota');
 let pVisor=document.getElementById('pVisor');
 let gif= document.getElementById("gif");
 const gifs=[
-    "/gifs/1.gif",
-    "/gifs/2.gif",
-    "/gifs/3.gif",
-    "/gifs/4.gif"
+    "gifs/1.gif",
+    "gifs/2.gif",
+    "gifs/3.gif",
+    "gifs/4.gif"
 ];
 
 const validarNota=(input)=>{
