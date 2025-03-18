@@ -87,7 +87,10 @@ promBtn.addEventListener('click',()=>{
 });
 mayorNota.addEventListener('click',()=>{
     let materiasMaxNota=mayorNotaInt([parseInt(mate.value),parseInt(lengua.value),parseInt(efsi.value)]);
-    console.log(materiasMaxNota);
+    if(datosValidos()){
     pVisor.style.color="blue"
     pVisor.innerText="La/s materia/s con mayor nota es/son: "+materiasMaxNota.join(", ");
+    }else{
+        alert("Los datos no son válidos o no has ingresado todas las notas!");
+    }
 });
